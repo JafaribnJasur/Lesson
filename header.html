@@ -3,11 +3,220 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=
-    , initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        table, th, td {
+          border:1px solid black;
+        }
+        </style>
 </head>
 <body>
-    Header
+    <h3>Do-It-Yourself Web Authoring - a beginner's HTML tutorial</h3>
+    <img src="http://www.columbia.edu/~fdc/picture-of-something.jpg" alt="">
+    <figcaption>A random photo... (The Hudson River at 125th Street about 2002)</figcaption>
+    <p> <a href="http://www.columbia.edu/~fdc/">Frank da Cruz</a> 
+    </br>
+       <i>Updated in 2019 and 2021 for HTML5 and "fluidity".</i> </br> </p>
+        
+      <p> This page shows how to create Web pages by hand, the original way. Although today most Web pages are created by "Web authoring systems" that are designed to shield you from technical details, the fact is that HTML (the "programming" language of the Web) is not that difficult, as you can see if you follow this tutorial. To get an idea of what is possible with this technique, see these 100% hand-made websites:
+        </p> </br>
+        <ul>
+            <li><a href="https://kermitproject.org/newdeal/">The New Deal in New York City 1933-1943</a></li>
+            <li><a href="http://www.columbia.edu/cu/computinghistory">The History of Computing at Columbia University 1890-2005</a></li>
+            <li><a href="http://www.columbia.edu/~fdc/family/dcmall.html">The Washington DC Nation Mall in World War II</a></li>
+            <li><a href="http://www.columbia.edu/~fdc/family/hallshill.html">Arlington, Virginia, 1956-61: The Hall's Hill Segregation Wall</a></li>
+            <li><a href="http://www.columbia.edu/~fdc/family/frankfurt.html">Frankfurt, Germany, 1959-61</a> </li>
+        </ul>
+        <hr/>
+        <h2>CONTENTS</h2>
+        <ol>
+            <li><a href="http://www.columbia.edu/~fdc/sample.html#basics">Creating a Web Page</a></li>
+            <li><a href="http://www.columbia.edu/~fdc/sample.html#syntax">HTML Syntax</a></li>
+            <li><a href="http://www.columbia.edu/~fdc/sample.html#chars">Special Characters</a></li>
+            <li><a href="http://www.columbia.edu/~fdc/sample.html#convert">Converting Plain Text to HTML</a></li>
+            <li><a href="http://www.columbia.edu/~fdc/sample.html#effects">Effects</a></li>
+            <li><a href="http://www.columbia.edu/~fdc/sample.html#lists">Lists</a></li>
+            <li><a href="http://www.columbia.edu/~fdc/sample.html#links">Links</a></li>
+            <li><a href="http://www.columbia.edu/~fdc/sample.html#tables">Tables</a></li>
+            <li><a href="http://www.columbia.edu/~fdc/sample.html#viewing">Viewing your Web page</a></li>
+            <li><a href="http://www.columbia.edu/~fdc/sample.html#install">Installing your Web Page on the Internet</a></li>
+            <li><a href="http://www.columbia.edu/~fdc/sample.html#more">Where to go from here</a></li>
+            <li><a href="http://www.columbia.edu/~fdc/sample.html#fluid">Postscript: Cell Phones</a></li>
+            
+        </ol>
+        <p>
+            You can create a Web page on your desktop computer but nobody can see it but you. If your want other people to be able to see your Web pages, you need an account on a computer that has a Web server. Nowadays most people have their own computers on their desks, but normally they don't have Web servers and anyway you don't want the whole world coming into your desktop computer to see your web page because (a) it's not designed for that, and (b) who knows what else they might see. And (c) for security reasons, Web servers should be managed by professionals. Most institutions have big central shared computers for this purpose, which usually have a <a href="http://kermitproject.org/unix.html">Unix</a>-like operating system such as Linux. You need an account on one of these so you can put your web pages there. If you don't have access to such a computer, you can get a low-cost account on a service like <a href="http://panix.com/">Panix.com.</a></p> </br>
+            <p>
+                You can still create Web pages on your own computer and look at them with your computer's Web browser, but for other people to see them, you have to upload them to the "big" computer that has the Web browser. The rest of this document is about how to create your first Web page.
+            </p>
+            <hr/>
+
+            <h2>1. Creating a Web Page</h2> </br>
+            <p>
+                This page was typed by hand. Anybody can do this, you don't need any special "web creation" tools or HTML editors, and the pages you make can be viewed from any browser. To see how this page was made, choose <b>View Source</b> (or View Page Source, or View Document Source) in your browser's menu (or — in at least Chrome and Firefox — Ctrl-U on your keyboard). A simple web page like this one is just plain text with HTML commands (markup) mixed in. HTML commands (properly called "tags") themselves are plain text.
+            </p>
+        </br>
+        <p>
+            When you're just learning and want to experiment, you can do everything on your PC. Create a new directory ("folder") for your website, and then put the web-page files (HTML plus any pictures) in it. Use NotePad or other plain-text editor (not word processor) on your PC to create your "home page", a file named index.html, which you can view locally with your Web browser. (You can also use a word processors such as Word or WordPad if you save in "plain text", "text", "text document", or "text document MS-DOS format".) <a href="http://www.columbia.edu/~fdc/sample.html#install">Later</a> I'll explain how you can install your web site on the Internet.
+        </p>
+    </br>
+    <p>
+        Once you've made your "home page" (index.html) you can add more pages to your site, and your home page can link to them.
+    </p>
+    <hr/>
+    <h2>2. HTML Syntax</h2>
+    <p>
+        Web pages are written in Hyper Text Markup Language (HTML). HTML has three special characters: <code>&lt;, &, &gt;</code>. An HTML command is enclosed in <code>&lt;...&gt;</code>, for example <code>&lt;p&gt;</code>, which is a paragraph separator, or <code>&lt;b&gt;</code> ("begin bold") and <code>&lt;/b&gt;</code> ("end bold"). So the following HTML text:
+    </p>
+    <pre>This sentence contains <code>&lt;b&gt;bold&lt;/b&gt;</code> text.</pre>
+    <p>produces:</p>
+    <p>This sentence contains <b>bold</b> text.</p>
+    <p>A Web page starts with a series of HTML commands, and ends with a few more. The contents go in between:</p>
+   <pre>
+        <code>&lt;!DOCTYPE HTML&gt;</code>
+        <code>&lt;html lang="en"&gt;</code>
+        <code>&lt;head&gt;</code>
+        <code>&lt;META charset="UTF-8"&gt;</code>
+        <code>&lt;META name="viewport"
+         content="width=device-width, initial-scale=1.0"&gt;</code>
+        <code>&lt;title&gt;</code>Sample Web Page<code>&lt;/title&gt;</code>
+        <code>&lt;/head&gt;</code>
+        <code> &lt;body&gt;</code>
+        (Contents go here)
+        
+        <code>&lt;/body&gt;</code>
+        <code>&lt;/html&gt;</code>
+    </pre>
+    <p>
+        The first line <code>(DOCTYPE)</code> specifies which markup language the page uses (<a href="https://en.wikipedia.org/wiki/HTML">HTML</a> = Hypertext Markup Language); just copy this line. The next line, <code>&lt;html lang="en"&gt;</code>, starts the page and specifies the (human) language it is written in (language codes are specified <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">here</a>), and is matched by the line <code>&lt;/html&gt;</code>, which closes the page. <code>&lt;head&gt;</code> starts the heading, which contains a title to be displayed on the browser's title bar and a declaration of the character set (nowadays it should always be <a href="https://en.wikipedia.org/wiki/UTF-8">UTF-8</a>) and the "viewport" line which is a compulsory adaptation for cell phones, "smart" watches, etc. <code>&lt;/head&gt;</code> closes the heading. The head can also contain other items such as style parameters that you can learn about later; for example by asking Google ("HTML how do I change the font size?").
+    </p>
+    <p>The <code>&lt;body&gt;</code> tag starts the body of the document, is closed by <code>&lt;/body&gt;</code> tag.</p>
+
+    <p>As you can see, most HTML commands come in begin-end pairs: <code>&lt;b&gt;</code>...<code>&lt;/b&gt;</code>, <code>&lt;head&gt;</code>...<code>&lt;/head&gt;</code>, etc. The closing part of the command has a slash (/) between the &lt; and the first letter of the command.</p>
+
+    <p>Blank lines and line breaks are ignored. The browser automatically "flows" your text into lines and paragraphs that fit in its window. Paragraphs must be separated by <code>&lt;p&gt;</code>. Line breaks can be forced by <code>&lt;br&gt;</code>.</p>
+    <i>Example for Windows:</i> 
+
+
+         <p style="float; right">Use the mouse to copy the HTML above into NotePad. Then save the file<i>(File -> Save As...)</i> in your Web directory as <code>index.html.</code> Suppose your Windows username is Olga. Then (depending on which version of Windows you have) this might be:</p> 
+         <p>Now to see your new web page, just double-click on the Web folder and then double-click on <code>index.html.</code></p>
+
+
+
+         <p>Now you're ready to start adding "content" to your web page. Go back to NotePad and replace the title and "(Contents go here)" with whatever you want. Any time you want to see the result, use File -> Save in NotePad and then click the Reload button on your browser.</p>
+         <p>The next sections tell how to achieve different kinds of effects.</p>
+         <hr/>
+         <h3>3. Special Characters</h3>
+         <p>HTML special "character entities" start with ampersand (&) and end with semicolon (;), like <code>"&amp;euro;"</code> = "€". The ever-popular "no-break space" is <code>&amp;nbsp;</code>. There are special entity names for accented Latin letters and other West European special characters such as:</p>
+         
+         <table style="width: 40%">
+            <tr>
+                <td>&amp;auml;</td>
+                <td>a-umlaut</td>
+                <td>ä </td>
+            </tr>
+            <tr>
+                <td>&amp;Auml;</td>
+                <td>A-umlaut</td>
+                <td>Ä</td>
+            </tr>
+            <tr>
+                <td>&amp;aacute;</td>
+                <td>a-acute</td>
+                <td> á </td>
+            </tr>
+            <tr>
+                <td>&amp;agrave;</td>
+                <td>	a-grave</td>
+                <td>à </td>
+            </tr>
+            <tr>
+                <td>&amp;ntilde</td>
+                <td>	n-tilde</td>
+                <td>ñ</td>
+            </tr>
+            <tr>
+                <td>&amp;szlig;</td>
+                <td>German double-s</td>
+                <td>ß </td>
+            </tr>
+            <tr>
+                <td>&amp;thorn;</td>
+                <td>Icelandic thorn</td>
+                <td>þ</td>
+            </tr>
+
+         </table>
+         <p>(The table above is shown in the basic, default style of HTML. Of course there are many ways to customize the appearance of tables; more about this <a href="http://www.columbia.edu/~fdc/sample.html#tables">below.</a></p>
+         <p>Examples:</p>
+         <p>For <b>Spanish</b> you would need:  <pre>      <code>&amp;Aacute; (Á), &amp;aacute; (á), &amp;Eacute; (É), &amp;eacute; (é), &amp;Iacute; (Í), &amp;iacute; (í), &amp;Oacute; (Ó),
+      &amp;oacute; (ó), &&amp;acute; (ú), &amp;uacute; (ú), &amp;Uuml; (Ü), &amp;uuml; (ü), &amp;Ntilde; (Ñ), &amp;ntilde; (ñ); &amp;iquest; (¿); &amp;iexcl; (¡).
+      Example: Añorarán = A&amp;ntilde;orar&amp;aacute;n.</code>
+             </pre></p>
+         <p>For <b>German</b> you would need:</p>
+        
+        
+         <pre><code>       &amp;Auml; (Ä), &amp;auml; (ä), &amp;Ouml; (Ö), &amp;ouml; (ö), &amp;Uuml; (ü), &amp;uuml; (ü), &amp;szlig; (ß).
+       Example: Grüße aus Köln = Gr&amp;uuml;&amp;szlig;e aus K&amp;ouml;ln.
+             </code>
+         </pre>
+         <p><a href="http://www.columbia.edu/~fdc/entities.html">CLICK HERE</a> for a complete list. When the page encoding is <a href="https://en.wikipedia.org/wiki/UTF-8">UTF-8,</a> which is recommended, you can also enter any character at all, Roman, Cyrillic, Arabic, Hebrew, Greek. Japanese, etc, either as numeric entities or (if you have a way to type them) directly from the keyboard.</p>
+         <p>And remember: if you want to include <code>&lt;, &, or &gt;</code> literally in text to be displayed, you have to write<code> &amp;lt;</code>,<code> &amp;amp;</code>, <code>&amp;gt;</code>, respectively.</p>
+         <hr/>
+         <h3>4. Converting Plain Text to HTML</h3>
+         <p>If you have a plain text file that you want to convert to HTML, load the file into a plain-text editor and then follow these steps.</p>
+         <ol>
+             <li>Change all occurrences of "&amp;" to "&amp;amp;".</li>
+             <li>Change all occurrences of "&lt;" to "&amp;lt;".</li>
+             <li>Change all occurrences of ">" to "&amp;gt;".</li>
+             <li>Change any accented letters to HTML entity names (previous section)*.</li>
+             <li>Put "&lt;p&gt;" between each paragraph.</li>
+             <li>Insert the standard prolog at the top, substituting an appropriate title.</li>
+             <li>Add &lt;/body&gt; and &lt;/html&gt; at the end.</li>
+             <li>Save the result as <code>xxx.html</code>, where <code>xxx</code> is the part of the original file's name before the dot, or whatever-else-you-want-to-call-it.html.</li>
+         </ol>
+         <p>If you are a <a href="http://kermitproject.org/about.html">Kermit</a> user, you can find a script to convert plain text to HTML <a href="http://kermitproject.org/html.html">HERE.</a></p>
+         <p>If the text contains lists, tables, or other structures, read on.</p>
+         <p>If you have a Microsoft Word document you want to convert to HTML, and your copy of Word does not allow the file to be "Saved As" HTML, then save it as plain text and follow the same instructions. In this case you lose the "richness" (bold, italics, font changes, etc) when you save the file, and will have to put the effects back by hand (next section).</p>
+         <div   style="width:60%;">
+            <hr/>
+            <small > * Not necessary if your text is already encoded as UTF-8. If it's not UTF-8, you can identify the encoding in the <META charset="..."> directive, but this topic is a bit advanced for this simple tutorial.</small>
+
+         </div>
+        
+
+         <p>You can have lists within lists:</p>
+         <ol>
+             <li>A gromet</li>
+             <li>A widget</li>
+             <li>A framus, which consists of the following components:</li>
+                <ul>
+                    <li>A doodad.</li>
+                    <li>A veeblefetzer -- these come in several colors:</li>
+                       <ol>
+                           <li>Purple</li>
+                           <li>Purple</li>
+                           <li>Purple</li>
+                       </ol>
+                    <li>A whatchamacallit.</li>
+                </ul>
+             <li>A doodad.</li>
+               
+         </ol>
+
+
+         <p>And you can have ordered lists that use letters instead of numbers:</p>
+         <ol type="I">
+             <li>Pennies</li>
+             <li>Nickels</li>
+             <li>Dimes</li>
+             <li>Quarters</li>
+
+         </ol>
+                
+  
+
 </body>
 </html>
