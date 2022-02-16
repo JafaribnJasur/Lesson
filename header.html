@@ -215,6 +215,77 @@
              <li>Quarters</li>
 
          </ol>
+         <hr/>
+         <h3>7. Links</h3>
+         <p>Links can be internal within a Web page (like to the <a href="http://www.columbia.edu/~fdc/sample.html#contents">Table of Contents</a> at the top), or they can be to external web pages or pictures on the same website, or they can be to websites, pages, or pictures anywhere else in the world.</p>
+         <p>Here is a link to the <a href="http://www.kermitproject.org/">Kermit Project home page.</a> And here is what the HTML looks like:</p>
+         <pre>        &lt;a href="http://www.kermitproject.org/"&gt;
+        Kermit Project home page
+         &lt;/a&gt;</pre>
+         <p>The part inside the quotes is called the URL (Uniform Resource Locator). Here is a link to <a href="http://www.columbia.edu/~fdc/sample.html#lists">Section 6</a> of the page you are reading, and the HTML:</p>
+         <pre>   &lt;a href="#lists">Section 6 &lt;/a&gt;</pre>
+         <p>The "#" indicates an internal section ID, in this case:</p>
+         <pre>&lt;h3 id="lists">6. Lists &lt;/h3&gt;</pre>
+         <p>Here is a link to <a href="http://kermitproject.org/ckuins.html#x4.0">Section 4.0</a> of another document, at another website; the <a href="http://kermitproject.org/ckuins.html">C-Kermit for Unix Installation Instructions.</a> And the HTML:</p>
+         <pre>            &lt;a href="http://kermitproject.org/ckuins.html#x4.0">
+            Section 4.0
+            &lt;/a&gt;</pre>
+            <p>Here is a link to a picture: <a href="http://www.columbia.edu/~fdc/rabbit.jpg">CLICK HERE</a> to see it.</p>
+            <p>If you want to link to a particular section of somebody else's Web page, visit the page, "view source", search for the text at that spot and see if there is an "id=" clause; if so, use the ID as shown just above; if not you're out of luck.</p>
+            <p>If you want to link to a particular page of a PDF document, just put "#page=123" (replace by the desired number) at the end of the URL.</p>
+            <hr/>
+            <h3>8. Tables</h3>
+            <p>Here's a simple table with some headings and a few rows:</p>
+            <table style="border: none;">
+                <tr>
+                    <th>Heading A</th>
+                    <th>Heading B</th>
+                    <th>Heading C</th>
+                </tr>
+                <tr>
+                    <td style="border: none;">Cell 1A</td>
+                    <td style="border: none;">Cell 1B</td>
+                    <td style="border: none;">Cell 1C</td>
+                </tr>
+                <tr>
+                    <td style="border: none;">Cell 2A</td>
+                    <td style="border: none;">Cell 2B</td>
+                    <td style="border: none;">Cell 2C</td> 
+                </tr>
+                <tr>
+                    <td style="border: none;">Cell 3A</td>
+                    <td style="border: none;">Cell 3B</td>
+                    <td style="border: none;">Cell 3C</td>
+                </tr>
+            </table>
+            <p>Same table again but with borders:</p>
+            <table>
+                <tr>
+                    <th>Heading A</th>
+                    <th>Heading B</th>
+                    <th>Heading C</th>
+                </tr>
+                <tr>
+                    <td>Cell 1A</td>
+                    <td>Cell 1B</td>
+                    <td>Cell 1C</td>
+                </tr>
+                <tr>
+                    <td>Cell 2A</td>
+                    <td>Cell 2B</td>
+                    <td>Cell 2C</td> 
+                </tr>
+                <tr>
+                    <td>Cell 3A</td>
+                    <td>Cell 3B</td>
+                    <td>Cell 3C</td>
+                </tr>
+            </table>
+
+
+
+
+
                 
   
 
