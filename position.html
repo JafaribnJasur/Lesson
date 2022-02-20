@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+
+    <style>
+        body {
+            background-color: antiquewhite;
+            height: 100vh;
+            width: 100%;
+            margin:0;
+            padding: 0
+        }
+        .main {
+            height: 100%;
+            width: 100%;    
+        }
+        div {
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+        .static {
+            margin: 30px 10px;
+            width: 30%;
+            height: 100px;
+        }
+        .relative {
+            width: 50%;
+            height: 100px;
+            position: relative;
+            left: 100px;
+        }
+        .relative2 {
+            width: 100%;
+            height: 50px;
+            position: relative;
+      
+        }
+        .fixed {
+            position: fixed;
+            top: 10px;
+            width: 100%;
+            background-color: aqua;
+            margin: 0;
+        }
+        .absolute {
+            height: 50px;
+            position:absolute;
+            right: 0;
+            background-color: blueviolet;
+            bottom: 0
+        }
+        .absolute1 {
+            height: 50px;
+            position:absolute;
+            right: 10px;
+            background-color: blueviolet;
+            bottom: 10px
+        }
+        .thenChild {
+            height: 200px;
+        }
+        .sticky {
+            background-color: chartreuse;
+            position:-webkit-sticky;
+            position:sticky;
+            top:10px;
+        }
+
+    </style>
+
+
+</head>
+<body>
+    <div class="main">
+
+        <div class="static">position: satic</div>
+        <div class="relative">postion: relative</div>
+        <div class="fixed">postion: fixed</div>
+        <div>Child 1</div>
+        <div>Child 2</div>
+        <div class="relative2">postion: relative</div>
+        <div>Child 3</div>
+        <div class="absolute">position: absolute</div>
+        <div>Child 4</div>
+
+        <div class="thenChild">Child 21</div>
+        <div class="thenChild">Child 22</div>
+        <div class="thenChild">Child 23</div>
+        <div class="thenChild">Child 24</div>
+        <div class="sticky">position: sticky</div>
+        <div class="thenChild">Child 25</div>
+        <div class="thenChild">Child 26</div>
+        <div class="thenChild">Child 27</div>
+        <div class="thenChild">Child 28</div>
+        <div class="thenChild">Child 29</div>
+        <div class="thenChild">Child 210</div>
+        <div class="thenChild">Child 11</div>
+        <div class="thenChild">Child 12</div>
+      
+        <div class="thenChild">Child 13</div>
+        <div class="thenChild" style="position: relative; width: 50%">Child 14
+
+
+            <div class="absolute1">position: absolute</div>
+        </div>
+        <div class="thenChild">Child 15</div>
+
+
+
+
+      
+
+
+ 
+    </div>
+ 
+ 
+</body>
+</html>
