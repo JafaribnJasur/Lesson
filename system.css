@@ -1,0 +1,8 @@
+.head {
+  position: relative;
+  height: 200px;
+  background-color: midnightblue;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+}
